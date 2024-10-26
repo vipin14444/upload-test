@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "rn-demo-app",
+    "slug": "rn-demo-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.demoorg.demoapp",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app requires access to the camera to take photos or record videos.",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to access your media library to save photos and videos.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["android.permission.RECORD_AUDIO"],
+      "package": "com.demoorg.demoapp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your images to select a profile picture for shop and user."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
