@@ -83,6 +83,7 @@ export function useFileUpload() {
       });
 
       // Execute the upload
+      // !! EXCEPTION ON THIS LINE !!
       const response = await upload.done();
       console.log("Upload complete:", response);
       setUploading(false);
